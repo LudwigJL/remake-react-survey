@@ -8,6 +8,8 @@ export default function App() {
     // <> </> <- These are called React Fragments, and they allow us to return more than one top component
     <>
       <Header />
+
+      
       <Survey />
     </>
   );

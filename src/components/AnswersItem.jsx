@@ -9,10 +9,12 @@ const answersSet = {
 };
 
 function ItemsList({ list }) {
+
   return (
     <ul>
-      {list.map((item) => (
-        <li>{answersSet[item]}</li>
+      {list.map((item, index) => (
+        <li key={index}>
+          {answersSet[item]}</li>
       ))}
     </ul>
   );
@@ -24,6 +26,10 @@ export default function AnswersItem({
   // Rememeber here we're destructuring answerItem, which is the prop name that we've passed
   answerItem: { username, colour, timeSpent, review }
 }) {
+
+  console.log("inside");
+
+  
   return (
     <li>
       <article className="answer">
